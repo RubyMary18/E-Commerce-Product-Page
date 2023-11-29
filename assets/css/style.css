@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 ul li {
   list-style-type: none;
@@ -19,10 +22,56 @@ a {
   margin: 0 auto;
 }
 
+:root {
+  --light-gray: #a6a6aa;
+}
+
 /*=================================
   Header styling starts here
 =================================*/
 
+header .wrapper,
+.left-nav,
+.right-nav,
+.left-nav-list,
+.image-thumbnail-container {
+  display: flex;
+  align-items: center;
+}
+
+header .wrapper {
+  justify-content: space-between;
+  width: 77%;
+}
+
+.avatar img {
+  width: 50px;
+  height: 50px;
+}
+
+header {
+}
+
+header .wrapper {
+  padding: 27px 0;
+  border-bottom: 2px solid #eee;
+}
+
+.left-nav {
+  gap: 56px;
+}
+
+.left-nav-list {
+  gap: 32px;
+}
+
+.left-nav-list li a {
+  color: var(--light-gray);
+}
+
+.right-nav {
+  gap: 45px;
+}
 /*=================================
   Header styling ends here
 =================================*/
@@ -31,6 +80,41 @@ a {
   main styling starts here
 =================================*/
 
+main .wrapper {
+  width: 70.5%;
+  padding: 90px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-image-container img {
+  max-width: 440px;
+  border-radius: 15px;
+}
+
+.image-thumbnail-container li img {
+  max-width: 90px;
+  border-radius: 10px;
+}
+
+.image-thumbnail-container {
+  justify-content: space-between;
+}
+
+.main-image-container {
+  margin-bottom: 28px;
+}
+
+.product-image-container,
+.product-info-container {
+  max-width: 44%;
+}
+
+.sneaker {
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 700;
+}
 /*=================================
   main styling ends here
 =================================*/
