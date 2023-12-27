@@ -24,6 +24,7 @@ a {
 
 :root {
   --light-gray: #a6a6aa;
+  --light-orange: #ec8a3f;
 }
 
 /*=================================
@@ -42,19 +43,13 @@ header .wrapper,
 header .wrapper {
   justify-content: space-between;
   width: 77%;
+  padding: 27px 0 29px;
+  border-bottom: 2px solid #eee;
 }
 
 .avatar img {
   width: 50px;
   height: 50px;
-}
-
-header {
-}
-
-header .wrapper {
-  padding: 27px 0;
-  border-bottom: 2px solid #eee;
 }
 
 .left-nav {
@@ -66,7 +61,7 @@ header .wrapper {
 }
 
 .left-nav-list li a {
-  color: var(--light-gray);
+  color: #666;
 }
 
 .right-nav {
@@ -81,8 +76,8 @@ header .wrapper {
 =================================*/
 
 main .wrapper {
-  width: 70.5%;
-  padding: 90px 0;
+  width: 70.4%;
+  padding: 88px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -111,9 +106,27 @@ main .wrapper {
 }
 
 .sneaker {
-  letter-spacing: 2px;
+  letter-spacing: 1.1px;
   font-size: 14px;
   font-weight: 700;
+  color: var(--light-orange);
+}
+
+.product-info-container {
+  padding-top: 60px;
+}
+
+h1 {
+  font-size: 41px;
+  margin-top: 17px;
+  margin-bottom: 37px;
+}
+
+.product-info-container p {
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  line-height: 25px;
+  color: #666;
 }
 /*=================================
   main styling ends here
