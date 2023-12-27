@@ -25,6 +25,7 @@ a {
 :root {
   --light-gray: #a6a6aa;
   --light-orange: #ec8a3f;
+  --light-orange-bg: #ffeee1;
 }
 
 /*=================================
@@ -127,6 +128,42 @@ h1 {
   letter-spacing: 1.2px;
   line-height: 25px;
   color: #666;
+  margin-bottom: 27px;
+}
+
+.current-price {
+  font-weight: bold;
+  font-size: 29px;
+}
+
+.percentage {
+  background: var(--light-orange-bg);
+  color: var(--light-orange);
+  font-weight: bold;
+  padding: 5px 2%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.current-price-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.discount {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.cart-container {
+  display: flex;
+}
+
+.number-container {
+  display: flex;
 }
 /*=================================
   main styling ends here
