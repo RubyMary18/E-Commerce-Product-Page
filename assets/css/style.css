@@ -26,6 +26,8 @@ a {
   --light-gray: #a6a6aa;
   --light-orange: #ec8a3f;
   --light-orange-bg: #ffeee1;
+  --light-blue: #f7f8fe;
+  --orange: #fe7d1c;
 }
 
 /*=================================
@@ -118,7 +120,7 @@ main .wrapper {
 }
 
 h1 {
-  font-size: 41px;
+  font-size: 42px;
   margin-top: 17px;
   margin-bottom: 37px;
 }
@@ -164,6 +166,11 @@ h1 {
 
 .number-container {
   display: flex;
+  background: var(--light-blue);
+}
+
+.number-container span {
+  padding: 5px 5%;
 }
 /*=================================
   main styling ends here
