@@ -28,6 +28,7 @@ a {
   --light-orange-bg: #ffeee1;
   --light-blue: #f7f8fe;
   --orange: #fe7d1c;
+  --cream: #ebe0b9;
 }
 
 /*=================================
@@ -162,15 +163,54 @@ h1 {
 
 .cart-container {
   display: flex;
+  gap: 15px;
 }
 
 .number-container {
   display: flex;
   background: var(--light-blue);
+  flex-basis: 35%;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  /* padding: 19px 3%; */
 }
 
-.number-container span {
-  padding: 5px 5%;
+.number-container li {
+  flex-grow: 1;
+  /* justify-content: center; */
+  text-align: center;
+  padding: 13px 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+li.number-display {
+  font-size: 18px;
+}
+
+.decrement,
+.increment {
+  color: var(--orange);
+}
+
+.cart-box {
+  flex-basis: 65%;
+  background: var(--orange);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.cart-box button {
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--cream);
+  font-size: 15px;
+  font-weight: bold;
 }
 /*=================================
   main styling ends here
