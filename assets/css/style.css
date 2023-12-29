@@ -159,6 +159,7 @@ h1 {
 .discount {
   color: #999;
   text-decoration: line-through;
+  margin-bottom: 37px;
 }
 
 .cart-container {
@@ -169,7 +170,7 @@ h1 {
 .number-container {
   display: flex;
   background: var(--light-blue);
-  flex-basis: 35%;
+  flex-basis: 37%;
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
@@ -201,6 +202,7 @@ li.number-display {
   display: flex;
   justify-content: center;
   border-radius: 10px;
+  gap: 15px;
 }
 
 .cart-box button {
@@ -211,6 +213,21 @@ li.number-display {
   color: var(--cream);
   font-size: 15px;
   font-weight: bold;
+}
+
+.cart-box span {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.cart-box span::before {
+  content: "\f07a";
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: 0;
+  font-family: "FontAwesome";
+  color: var(--cream);
 }
 /*=================================
   main styling ends here
