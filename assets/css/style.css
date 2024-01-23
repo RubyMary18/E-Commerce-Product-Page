@@ -284,6 +284,27 @@ li.number-display {
   }
 }
 
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+  .product-info-container p {
+    font-size: 13px;
+  }
+
+  main .wrapper {
+    width: 86%;
+  }
+
+  .product-image-container {
+    max-width: 50%;
+  }
+
+  .product-info-container {
+    padding-top: 20px;
+  }
+}
+}
+}
+
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 }
