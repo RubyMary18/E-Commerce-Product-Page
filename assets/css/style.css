@@ -290,7 +290,8 @@ li.number-display {
     font-size: 13px;
   }
 
-  main .wrapper {
+  main .wrapper,
+  header .wrapper {
     width: 86%;
   }
 
