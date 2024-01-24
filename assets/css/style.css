@@ -420,3 +420,39 @@ li.number-display {
     display: flex;
   }
 }
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  .indicator {
+    padding: 0px 15px;
+  }
+  /* 
+  .icon {
+    width: 35px;
+    height: 35px;
+  } */
+
+  .avatar img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .right-nav {
+    gap: 25px;
+  }
+}
+
+/*media query for 420px starts here*/
+@media only screen and (max-width: 420px) {
+  .icon img {
+    width: 10px;
+  }
+
+  .cart-container {
+    flex-direction: column;
+  }
+
+  .cart-box {
+    padding: 5px 0;
+  }
+}
