@@ -234,6 +234,10 @@ li.number-display {
   font-family: "FontAwesome";
   color: var(--cream);
 }
+
+.mobile-menu {
+  display: none;
+}
 /*=================================
   main styling ends here
 =================================*/
@@ -306,4 +310,68 @@ li.number-display {
 
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
+  .mobile-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .left-nav {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .left-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .wrapper {
+    align-items: baseline;
+  }
+
+  .left-nav-list {
+    display: none;
+  }
+}
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  main .wrapper {
+    flex-direction: column;
+  }
+  .product-image-container,
+  .product-info-container {
+    max-width: 100%;
+  }
+
+  .product-info-container {
+    padding-top: 60px;
+  }
+
+  .product-info-container p {
+    font-size: 17px;
+  }
+
+  .price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .current-price-container,
+  .discount {
+    margin-bottom: 30px;
+  }
+
+  .number-container,
+  .cart-box {
+    flex-basis: 50%;
+  }
 }
