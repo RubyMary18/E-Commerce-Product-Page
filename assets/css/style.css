@@ -105,6 +105,10 @@ main .wrapper {
   height: 101px;
 }
 
+.active-image {
+  opacity: 0.3;
+}
+
 .image-thumbnail-container li {
   max-width: 100%;
 }
