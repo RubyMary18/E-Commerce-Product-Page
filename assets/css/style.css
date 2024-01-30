@@ -457,8 +457,8 @@ li.number-display {
   }
 }
 
-/*media query for 420px starts here*/
-@media only screen and (max-width: 420px) {
+/*media query for 375px starts here*/
+@media only screen and (max-width: 375px) {
   header .wrapper {
     padding: 14px 0 20px;
     width: 87.5%;
@@ -502,7 +502,7 @@ li.number-display {
     width: 87.5%;
     margin: 0 auto;
     padding-top: 15px;
-    padding-bottom: 88px;
+    padding-bottom: 91px;
   }
 
   .sneaker {
@@ -519,5 +519,28 @@ li.number-display {
     font-size: 13px;
     line-height: 24px;
     letter-spacing: 0.7px;
+  }
+
+  .current-price {
+    font-size: 28px;
+  }
+
+  .percentage {
+    padding: 1px 6%;
+  }
+
+  .product-info-container p,
+  .current-price-container,
+  .discount {
+    margin-bottom: 20px;
+  }
+
+  .number-container li {
+    padding: 12px 6%;
+    flex-grow: 0;
+  }
+
+  .cart-box {
+    padding: 7px 0;
   }
 }
