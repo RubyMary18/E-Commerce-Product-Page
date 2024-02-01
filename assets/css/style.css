@@ -288,6 +288,10 @@ li.number-display {
   cursor: pointer;
 }
 
+.avatar img {
+  border: 2px solid #f77f29;
+  border-radius: 50%;
+}
 /*=================================
   main styling ends here
 =================================*/
