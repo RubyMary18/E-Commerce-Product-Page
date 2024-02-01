@@ -292,6 +292,11 @@ li.number-display {
   border: 2px solid #f77f29;
   border-radius: 50%;
 }
+
+.cart-basket {
+  box-shadow: 11px 16px 21px -3px rgba(0, 0, 0, 0.1),
+    -8px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
 /*=================================
   main styling ends here
 =================================*/
