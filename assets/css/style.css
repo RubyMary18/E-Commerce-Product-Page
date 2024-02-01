@@ -278,9 +278,16 @@ li.number-display {
   transform: translate(-50%, -50%);
 }
 
-.indicator li:hover {
+.indicator li:hover,
+.cart:hover,
+.avatar:hover,
+.image-thumbnail-container li:hover,
+.decrement:hover,
+.increment:hover,
+.cart-box:hover {
   cursor: pointer;
 }
+
 /*=================================
   main styling ends here
 =================================*/
