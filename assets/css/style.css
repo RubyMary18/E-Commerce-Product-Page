@@ -327,6 +327,37 @@ li.number-display {
   border-bottom: 0.1px solid #e8e7eb;
   font-weight: bold;
 }
+
+.modal-box {
+  position: absolute;
+  top: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: red;
+  width: 38.2%;
+}
+
+.modal-box .wrapper {
+  flex-direction: column;
+  width: 100%;
+}
+
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.hero-image-container figure img {
+  width: 100%;
+}
+
+.hero-image-container figure {
+  width: 100%;
+}
+
 /*=================================
   main styling ends here
 =================================*/
