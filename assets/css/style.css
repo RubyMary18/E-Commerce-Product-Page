@@ -361,12 +361,17 @@ li.number-display {
 .close-icon {
   display: flex;
   justify-content: end;
+  position: relative;
 }
 
 .close-icon span {
   width: 25px;
   height: 25px;
   display: inline-block;
+  text-indent: -9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .close-icon span::before {
@@ -374,6 +379,8 @@ li.number-display {
   font-family: "FontAwesome";
   color: #fff;
   font-size: 30px;
+  text-indent: 0;
+  position: absolute;
 }
 /*=================================
   main styling ends here
