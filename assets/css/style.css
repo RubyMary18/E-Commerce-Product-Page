@@ -358,6 +358,23 @@ li.number-display {
   width: 100%;
 }
 
+.close-icon {
+  display: flex;
+  justify-content: end;
+}
+
+.close-icon span {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}
+
+.close-icon span::before {
+  content: "\f00d";
+  font-family: "FontAwesome";
+  color: #fff;
+  font-size: 30px;
+}
 /*=================================
   main styling ends here
 =================================*/
