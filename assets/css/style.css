@@ -340,6 +340,7 @@ li.number-display {
 .modal-box .wrapper {
   flex-direction: column;
   width: 100%;
+  padding: 0;
 }
 
 .hero-image-container {
@@ -348,10 +349,13 @@ li.number-display {
   align-items: center;
   width: 100%;
   flex-direction: column;
+  position: relative;
+  margin-bottom: 35px;
 }
 
 .hero-image-container figure img {
   width: 100%;
+  border-radius: 15px;
 }
 
 .hero-image-container figure {
@@ -362,6 +366,7 @@ li.number-display {
   display: flex;
   justify-content: end;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .close-icon span {
@@ -381,6 +386,40 @@ li.number-display {
   font-size: 30px;
   text-indent: 0;
   position: absolute;
+}
+
+.modal-arrow-container {
+  width: 100%;
+  position: absolute;
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+
+.modal-indicator {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.modal-indicator .icon {
+  width: 55px;
+  height: 55px;
+}
+
+.modal-indicator .previous-icon {
+  position: absolute;
+  left: -27.5px;
+}
+
+.modal-indicator .next-icon {
+  position: absolute;
+  right: -27.5px;
+}
+
+.modal-thumbnail-container {
+  padding: 0 9.2%;
 }
 /*=================================
   main styling ends here
