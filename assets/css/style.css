@@ -89,13 +89,11 @@ main .wrapper {
 
 .main-image-container img {
   max-width: 100%;
-  /* max-width: 440px; */
   border-radius: 15px;
 }
 
 .image-thumbnail-container li img,
 .modal-thumbnail-container li img {
-  /* max-width: 90px; */
   max-width: 100%;
   max-height: 95px;
   border-radius: 10px;
@@ -328,20 +326,6 @@ li.number-display {
   font-weight: bold;
 }
 
-/* .modal-box {
-  position: absolute;
-  top: 85px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 38.2%;
-} */
-
-/* .modal-box .wrapper {
-  flex-direction: column;
-  width: 100%;
-  padding: 0;
-} */
-
 .hero-image-container {
   display: flex;
   justify-content: center;
@@ -423,7 +407,6 @@ li.number-display {
 
 .modal-box {
   position: fixed;
-  /* top: 85px; */
   left: 50%;
   transform: translateX(-50%);
   background-color: red;
@@ -444,6 +427,17 @@ li.number-display {
   top: 85px;
 }
 
+.modal-box {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
 /*=================================
   main styling ends here
 =================================*/
@@ -509,11 +503,6 @@ li.number-display {
   .modal-box .wrapper {
     width: 45%;
   }
-
-  /* .modal-thumbnail-container li,
-  .modal-thumbnail-container li img {
-    height: 95px;
-  } */
 }
 
 /*media query for 1024px starts here*/
@@ -579,6 +568,23 @@ li.number-display {
   .modal-box .wrapper {
     width: 50%;
   }
+
+  .modal-box .wrapper {
+    width: 50%;
+  }
+
+  .modal-thumbnail-container li {
+    height: 90px;
+  }
+
+  .modal-thumbnail-container li img {
+    max-height: 85px;
+  }
+
+  .modal-indicator .icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /*media query for 768px starts here*/
@@ -626,6 +632,10 @@ li.number-display {
   .indicator {
     display: flex;
   }
+
+  .modal-box .wrapper {
+    width: 75%;
+  }
 }
 
 /*media query for 540px starts here*/
@@ -633,11 +643,6 @@ li.number-display {
   .indicator {
     padding: 0px 15px;
   }
-  /* 
-  .icon {
-    width: 35px;
-    height: 35px;
-  } */
 
   .avatar img {
     width: 40px;
@@ -646,6 +651,33 @@ li.number-display {
 
   .right-nav {
     gap: 25px;
+  }
+
+  .modal-box .wrapper {
+    width: 85%;
+  }
+
+  .modal-thumbnail-container li {
+    height: 80px;
+  }
+
+  .modal-thumbnail-container li img {
+    max-height: 75px;
+  }
+
+  .modal-indicator .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .modal-indicator .previous-icon {
+    position: absolute;
+    left: -17.5px;
+  }
+
+  .modal-indicator .next-icon {
+    position: absolute;
+    right: -17.5px;
   }
 }
 
@@ -661,6 +693,14 @@ li.number-display {
 
   .cart-box {
     padding: 5px 0;
+  }
+
+  .modal-thumbnail-container li {
+    height: 70px;
+  }
+
+  .modal-thumbnail-container li img {
+    max-height: 65px;
   }
 }
 
