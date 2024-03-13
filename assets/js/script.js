@@ -154,11 +154,11 @@ heroImage.addEventListener('click', () => {
 
             removeActiveImgList();
             removeActiveImg();
-            
+
             thumbNail[`${currentImg}`].classList.add('active-img-list');
             thumbNailImg[`${currentImg}`].classList.add('active-image');
 
-            currentImg = `${ind+1}`;
+            currentImg = `${ind + 1}`;
         })
     })
 
@@ -166,3 +166,30 @@ heroImage.addEventListener('click', () => {
 //lightbox end
 
 
+//cart functionality start
+let increment = document.querySelector('.number-container .increment');
+let decrement = document.querySelector('.number-container .decrement');
+let display = document.querySelector('.number-container .number-display');
+
+let addCartBtn = document.querySelector('.cart-box');
+
+var initial = 0;
+
+increment.addEventListener('click', () => {
+    initial++;
+    numberOfOrder();
+    console.log(initial);
+})
+
+decrement.addEventListener('click', () => {
+    initial--;
+    if(initial < 0) {
+        initial = 0;
+    }
+    numberOfOrder();
+    console.log(initial);
+})
+
+function numberOfOrder() {
+    display.innerHTML = initial;
+}
