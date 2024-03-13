@@ -1,3 +1,4 @@
+//lightbox start
 let heroImage = document.querySelector('.hero-image img');
 let thumbNail = document.querySelectorAll('.image-thumbnail-container li');
 let thumbNailImg = document.querySelectorAll('.image-thumbnail-container li img');
@@ -10,56 +11,158 @@ let modalThumbNailImg = document.querySelectorAll('.modal-thumbnail-container li
 
 let closeBtn = document.querySelector('.close-icon span');
 
-console.log(heroImgContainer);
 
-window.onload = () => {
-    
-    for (let i=0; i<thumbNail.length; i++){
-        thumbNail[i].onclick = () => {
-            thumbNail.forEach(li => {
-                li.classList.remove('active-img-list');
-            })
-            thumbNailImg.forEach(imgLi => {
-                imgLi.classList.remove('active-image');
-            })
-            let currentImgUrl = thumbNail[i].querySelector('img').src;
-            heroImage.src = currentImgUrl;
-            thumbNail[i].classList.add('active-img-list');
-            thumbNailImg[i].classList.add('active-image');
+let previous = document.querySelector('.indicator .previous-icon');
+let next = document.querySelector('.indicator .next-icon');
+let modalPrevious = document.querySelector('.modal-indicator .previous-icon');
+let modalNext = document.querySelector('.modal-indicator .next-icon');
 
-            preview(currentImgUrl);         
-        }
+var currentImg = 1;
 
-    }
-    function preview(currentImgUrl) {
-        heroImgContainer.onclick = () => {
-            modalBox.classList.add('show');
-            modalImg.src = currentImgUrl;
-
-            for (let j=0; j<modalThumbNail.length; j++) {
-
-                modalThumbNail[j].onclick = () => {
-                    console.log("working");
-                    modalThumbNail.forEach(li => {
-                        li.classList.remove('active-img-list');
-                    })
-
-                    modalThumbNailImg.forEach(imgLi => {
-                        imgLi.classList.remove('active-image');
-                    })
-
-                    let modalCurrentImgUrl = modalThumbNail[j].querySelector('img').src;
-                    modalImg.src = modalCurrentImgUrl;
-                    modalThumbNail[j].classList.add('active-img-list');
-                    modalThumbNailImg[j].classList.add('active-image');
-                }
-            }
-
-            closeBtn.addEventListener('click', function() {
-                modalBox.classList.remove('show');
-            })
-        }
-    }
-
-    preview(heroImage.src);
+function openMenu() {
+    modalBox.classList.add('show');
 }
+
+function closeMenu() {
+    modalBox.classList.remove('show');
+}
+
+function removeActiveImgList() {
+    thumbNail.forEach(thumb => {
+        thumb.classList.remove('active-img-list')
+    })
+}
+
+function removeActiveImg() {
+    thumbNailImg.forEach(thumb => {
+        thumb.classList.remove('active-image')
+    })
+}
+
+function removeModalActiveImgList() {
+    modalThumbNail.forEach(thumb => {
+        thumb.classList.remove('active-img-list')
+    })
+}
+
+function removeModalActiveImg() {
+    modalThumbNailImg.forEach(thumb => {
+        thumb.classList.remove('active-image')
+    })
+}
+
+function nextImg() {
+    if (currentImg == 4) {
+        currentImg = 1;
+    } else {
+        ++currentImg;
+    }
+
+    modalImg.src = `./assets/images/image-product-${currentImg}.jpg`;
+    heroImage.src = `./assets/images/image-product-${currentImg}.jpg`;
+
+    removeActiveImgList();
+    thumbNail[`${currentImg - 1}`].classList.add('active-img-list');
+    removeActiveImg();
+    thumbNailImg[`${currentImg - 1}`].classList.add('active-image');
+    removeModalActiveImgList();
+    modalThumbNail[`${currentImg - 1}`].classList.add('active-img-list');
+    removeModalActiveImg();
+    modalThumbNailImg[`${currentImg - 1}`].classList.add('active-image');
+}
+
+function previousImg() {
+    if (currentImg == 1) {
+        currentImg = 4;
+    } else {
+        currentImg--;
+    }
+
+    modalImg.src = `./assets/images/image-product-${currentImg}.jpg`;
+    heroImage.src = `./assets/images/image-product-${currentImg}.jpg`;
+
+    removeActiveImgList();
+    thumbNail[`${currentImg - 1}`].classList.add('active-img-list');
+    removeActiveImg();
+    thumbNailImg[`${currentImg - 1}`].classList.add('active-image');
+    removeModalActiveImgList();
+    modalThumbNail[`${currentImg - 1}`].classList.add('active-img-list');
+    removeModalActiveImg();
+    modalThumbNailImg[`${currentImg - 1}`].classList.add('active-image');
+}
+
+
+//invoke functions
+closeBtn.addEventListener('click', closeMenu);
+heroImgContainer.addEventListener('click', openMenu);
+modalNext.addEventListener('click', nextImg);
+modalPrevious.addEventListener('click', previousImg);
+next.addEventListener('click', nextImg);
+previous.addEventListener('click', previousImg);
+
+
+thumbNail.forEach((image, ind) => {
+
+    image.addEventListener('click', () => {
+
+        heroImage.src = `./assets/images/image-product-${ind + 1}.jpg`;
+
+        thumbNail.forEach(thumb => {
+            thumb.classList.remove('active-img-list')
+        })
+
+        thumbNailImg.forEach(imgLi => {
+            imgLi.classList.remove('active-image');
+        })
+
+        image.classList.add('active-img-list');
+        image.querySelector('img').classList.add('active-image');
+
+        currentImg = `${ind + 1}`;
+
+
+    })
+})
+
+heroImage.addEventListener('click', () => {
+    modalImg.src = heroImage.src;
+
+    modalThumbNail.forEach(thumb => {
+        thumb.classList.remove('active-img-list')
+    })
+
+    modalThumbNailImg.forEach(imgLi => {
+        imgLi.classList.remove('active-image');
+    })
+
+    modalThumbNail[`${currentImg - 1}`].classList.add('active-img-list');
+    modalThumbNailImg[`${currentImg - 1}`].classList.add('active-image');
+
+    modalThumbNail.forEach((image, ind) => {
+
+        image.addEventListener('click', () => {
+
+            modalImg.src = `./assets/images/image-product-${ind + 1}.jpg`;
+            heroImage.src = modalImg.src;
+            currentImg = `${ind}`;
+
+            removeModalActiveImgList();
+            removeModalActiveImg();
+
+            image.classList.add('active-img-list');
+            image.querySelector('img').classList.add('active-image');
+
+            removeActiveImgList();
+            removeActiveImg();
+            
+            thumbNail[`${currentImg}`].classList.add('active-img-list');
+            thumbNailImg[`${currentImg}`].classList.add('active-image');
+
+            currentImg = `${ind+1}`;
+        })
+    })
+
+})
+//lightbox end
+
+
