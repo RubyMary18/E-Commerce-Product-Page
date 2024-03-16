@@ -48,17 +48,17 @@ header .wrapper,
 header .wrapper {
   justify-content: space-between;
   width: 77%;
-  padding: 27px 0 29px;
+  padding: 31px 0 31px;
   border-bottom: 2px solid #eee;
 }
 
 .avatar img {
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
 }
 
 .left-nav {
-  gap: 56px;
+  gap: 66px;
 }
 
 .left-nav-list {
@@ -82,7 +82,7 @@ header .wrapper {
 
 main .wrapper {
   width: 70.4%;
-  padding: 88px 0 130px;
+  padding: 97px 0 130px;
   display: flex;
   justify-content: space-between;
 }
@@ -130,32 +130,33 @@ main .wrapper {
 
 .sneaker {
   letter-spacing: 1.1px;
-  font-size: 14px;
+  font-size: 14.5px;
   font-weight: 700;
   color: var(--light-orange);
 }
 
 .product-info-container {
-  padding-top: 60px;
+  padding-top: 63px;
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 46px;
   margin-top: 17px;
-  margin-bottom: 30px;
+  margin-bottom: 38px;
+  line-height: 50px;
 }
 
 .product-info-container p {
-  font-size: 14px;
-  letter-spacing: 1.2px;
-  line-height: 25px;
+  font-size: 15px;
+  letter-spacing: 1.1px;
+  line-height: 27px;
   color: #666;
   margin-bottom: 27px;
 }
 
 .current-price {
   font-weight: bold;
-  font-size: 29px;
+  font-size: 32px;
 }
 
 .percentage {
@@ -171,7 +172,7 @@ h1 {
 .current-price-container {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
   margin-bottom: 10px;
 }
 
@@ -183,7 +184,7 @@ h1 {
 
 .cart-container {
   display: flex;
-  gap: 15px;
+  gap: 16px;
 }
 
 .number-container {
@@ -292,7 +293,7 @@ li.number-display {
 }
 
 .avatar img {
-  border: 2px solid #f77f29;
+  border: 2px solid transparent;
   border-radius: 50%;
 }
 
@@ -350,6 +351,11 @@ li.number-display {
   justify-content: end;
   position: relative;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.close-icon:hover span::before {
+  color: #ea8335;
 }
 
 .close-icon span {
@@ -384,6 +390,10 @@ li.number-display {
   justify-content: space-between;
   width: 100%;
   align-items: center;
+}
+
+.modal-indicator li:hover {
+  cursor: pointer;
 }
 
 .modal-indicator .icon {
@@ -438,6 +448,51 @@ li.number-display {
 .hide {
   display: none;
 }
+
+.cart {
+  display: flex;
+}
+
+.order-number {
+  position: relative;
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+.order-number::before {
+  content: "";
+  position: absolute;
+  background-color: #f77c20;
+  width: 23px;
+  height: 17px;
+  top: -8px;
+  left: -14px;
+  border-radius: 50%;
+}
+
+.avatar:hover img {
+  border: 2px solid #fe7d1c;
+}
+
+.left-nav-list li {
+  position: relative;
+}
+
+.logo-container:hover,
+.cart-box:hover,
+.cart-box button:hover {
+  cursor: pointer;
+}
+
+.left-nav-list li:hover::after {
+  width: 100%;
+  height: 2px;
+  background-color: #fe7d1c;
+  position: absolute;
+  content: "";
+  bottom: -50px;
+  left: 0px;
+}
 /*=================================
   main styling ends here
 =================================*/
@@ -451,6 +506,49 @@ li.number-display {
 =================================*/
 
 /*media query starts*/
+
+/*media query for 1440px starts here*/
+@media only screen and (max-width: 1440px) {
+  header .wrapper {
+    padding: 31px 0 31px;
+  }
+
+  .left-nav {
+    gap: 56px;
+  }
+
+  .avatar img {
+    width: 52px;
+    height: 52px;
+  }
+
+  h1 {
+    font-size: 46px;
+    margin-bottom: 30px;
+  }
+
+  main .wrapper {
+    padding: 88px 0 130px;
+  }
+
+  .product-info-container {
+    padding-top: 63px;
+  }
+
+  .sneaker {
+    font-size: 14px;
+  }
+
+  .product-info-container p {
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    line-height: 25px;
+  }
+
+  .current-price {
+    font-size: 29px;
+  }
+}
 
 /*media query for 1300px starts here*/
 @media only screen and (max-width: 1300px) {
