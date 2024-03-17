@@ -306,12 +306,12 @@ li.number-display {
   box-shadow: 11px 16px 21px -3px rgba(0, 0, 0, 0.1),
     -8px 10px 15px -3px rgba(0, 0, 0, 0.1);
   position: absolute;
-  right: 88px;
+  right: 6%;
   top: 90px;
   width: 25%;
   background-color: #fff;
   height: 255px;
-  display: none;
+  z-index: 9999;
 }
 
 .product-info {
@@ -419,7 +419,7 @@ li.number-display {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  background-color: red;
+  /* background-color: red; */
   width: 100%;
   height: 100%;
   z-index: 5;
@@ -438,14 +438,6 @@ li.number-display {
 }
 
 .modal-box {
-  display: none;
-}
-
-.show {
-  display: flex;
-}
-
-.hide {
   display: none;
 }
 
@@ -470,6 +462,14 @@ li.number-display {
   border-radius: 50%;
 }
 
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
 .avatar:hover img {
   border: 2px solid #fe7d1c;
 }
@@ -486,13 +486,90 @@ li.number-display {
 
 .left-nav-list li:hover::after {
   width: 100%;
-  height: 2px;
+  height: 4px;
   background-color: #fe7d1c;
   position: absolute;
   content: "";
   bottom: -50px;
   left: 0px;
 }
+
+.product-info {
+  padding: 25px;
+}
+
+.product-details {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+  justify-content: space-between;
+}
+
+.product-details figure:nth-of-type(1) {
+  width: 52px;
+  height: 52px;
+}
+
+.product-details img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.product-details p img {
+  width: 10px;
+  height: 10px;
+}
+
+.product-details .delete-icon {
+  width: 13px;
+  height: 19px;
+}
+
+.product-details .delete-icon:hover,
+.checkout-btn:hover {
+  cursor: pointer;
+}
+
+.product-info {
+  justify-content: space-between;
+  align-items: initial;
+}
+
+.product-details p {
+  font-size: 17px;
+  line-height: 25px;
+  color: #909195;
+}
+
+.cart-head {
+  font-size: 17px;
+}
+
+.checkout-btn {
+  width: 100%;
+  height: 60px;
+  border-radius: 15px;
+  border: none;
+  background-color: #ea7319;
+  font-size: 16px;
+  color: #fff5df;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.cart-basket {
+  /* right: 92px; */
+  height: auto;
+  border-radius: 10px;
+}
+
+.total-price {
+  font-weight: bold;
+  color: #000;
+}
+
 /*=================================
   main styling ends here
 =================================*/
@@ -548,6 +625,18 @@ li.number-display {
   .current-price {
     font-size: 29px;
   }
+
+  .product-details p {
+    font-size: 14px;
+  }
+
+  .product-info-box {
+    flex-grow: 1;
+  }
+
+  .cart-basket {
+    width: 26.5%;
+  }
 }
 
 /*media query for 1300px starts here*/
@@ -601,6 +690,14 @@ li.number-display {
   .modal-box .wrapper {
     width: 45%;
   }
+
+  .cart-basket {
+    width: 31%;
+  }
+
+  .product-details p {
+    font-size: 14px;
+  }
 }
 
 /*media query for 1024px starts here*/
@@ -628,6 +725,10 @@ li.number-display {
 
   .modal-thumbnail-container {
     padding: 0;
+  }
+
+  .cart-basket {
+    width: 35%;
   }
 }
 
@@ -667,10 +768,6 @@ li.number-display {
     width: 50%;
   }
 
-  .modal-box .wrapper {
-    width: 50%;
-  }
-
   .modal-thumbnail-container li {
     height: 90px;
   }
@@ -682,6 +779,15 @@ li.number-display {
   .modal-indicator .icon {
     width: 50px;
     height: 50px;
+  }
+
+  .product-details p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .cart-basket {
+    width: 38%;
   }
 }
 
@@ -734,6 +840,14 @@ li.number-display {
   .modal-box .wrapper {
     width: 75%;
   }
+
+  .cart-basket {
+    width: 50%;
+  }
+
+  .checkout-btn {
+    height: 50px;
+  }
 }
 
 /*media query for 540px starts here*/
@@ -777,6 +891,17 @@ li.number-display {
     position: absolute;
     right: -17.5px;
   }
+
+  .cart-basket {
+    width: 80%;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .product-details p {
+    font-size: 14px;
+  }
 }
 
 /*media query for 420px starts here*/
@@ -799,6 +924,19 @@ li.number-display {
 
   .modal-thumbnail-container li img {
     max-height: 65px;
+  }
+
+  .cart-basket {
+    width: 86%;
+    top: 80px;
+  }
+
+  .product-details p {
+    font-size: 13px;
+  }
+
+  .product-details {
+    gap: 8px;
   }
 }
 
