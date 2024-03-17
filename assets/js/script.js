@@ -170,10 +170,16 @@ heroImage.addEventListener('click', () => {
 let increment = document.querySelector('.number-container .increment');
 let decrement = document.querySelector('.number-container .decrement');
 let display = document.querySelector('.number-container .number-display');
+let orderNumber = document.querySelector('.order-number');
+console.log(orderNumber);
 
 let addCartBtn = document.querySelector('.cart-box');
 
 var initial = 0;
+
+function hide() {
+    orderNumber.classList.add('hide');
+}
 
 increment.addEventListener('click', () => {
     initial++;
@@ -193,3 +199,5 @@ decrement.addEventListener('click', () => {
 function numberOfOrder() {
     display.innerHTML = initial;
 }
+
+hide();
