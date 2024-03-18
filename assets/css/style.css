@@ -293,6 +293,10 @@ li.number-display {
   cursor: pointer;
 }
 
+.mobile-menu:hover {
+  cursor: pointer;
+}
+
 .avatar img {
   border: 2px solid transparent;
   border-radius: 50%;

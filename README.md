@@ -23,13 +23,13 @@ Users should be able to:
 
 ### Screenshot
 
-[Desktop-view]()
-[Mobile-view]()
+[Desktop-view](./assets/images/Screencapture-Desktop.png)
+[Mobile-view](./assets/images/Screencapture-Mobile.png)
 
 ### Links
 
-- Solution URL: []
-- Live Site URL: []
+- Solution URL: [https://github.com/RubyMary18/E-Commerce-Product-Page]
+- Live Site URL: [https://rubymary18.github.io/E-Commerce-Product-Page/]
 
 ## My process
 
