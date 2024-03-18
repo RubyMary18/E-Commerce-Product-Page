@@ -288,7 +288,8 @@ li.number-display {
 .modal-thumbnail-container li:hover,
 .decrement:hover,
 .increment:hover,
-.cart-box:hover {
+.cart-box:hover,
+.hero-image:hover {
   cursor: pointer;
 }
 
