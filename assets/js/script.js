@@ -171,7 +171,10 @@ let increment = document.querySelector('.number-container .increment');
 let decrement = document.querySelector('.number-container .decrement');
 let display = document.querySelector('.number-container .number-display');
 let orderNumber = document.querySelector('.order-number');
-console.log(orderNumber);
+let cart = document.querySelector('.cart');
+let cartBasket = document.querySelector('.cart-basket');
+let productInfo = document.querySelector('.product-info');
+let productEmpty = document.querySelector('.product-info-para');
 
 let addCartBtn = document.querySelector('.cart-box');
 
@@ -181,10 +184,15 @@ function hide() {
     orderNumber.classList.add('hide');
 }
 
+hide();
+
+function removeHide() {
+    orderNumber.classList.remove('hide');
+}
+
 increment.addEventListener('click', () => {
     initial++;
     numberOfOrder();
-    console.log(initial);
 })
 
 decrement.addEventListener('click', () => {
@@ -193,11 +201,88 @@ decrement.addEventListener('click', () => {
         initial = 0;
     }
     numberOfOrder();
-    console.log(initial);
 })
 
 function numberOfOrder() {
     display.innerHTML = initial;
 }
 
-hide();
+function cartInfo() {
+    cartBasket.classList.toggle('hide');
+}
+
+cart.addEventListener('click', ()=> {
+    cartInfo();
+})
+
+addCartBtn.addEventListener('click', ()=> {
+    removeHide();
+    orderNumber.classList.add('dis');
+    orderNumber.innerHTML = `${initial}`;
+
+    if(initial == 0){
+        orderNumber.classList.add('hide');
+    } else {
+        cartDisplay();
+    }
+})
+
+function cartDisplay() {
+    var output = "";
+    var totalPrice = initial * 125;
+
+    productEmpty.classList.add('hide');
+
+    if(productInfo.classList.contains('hide')) {
+        productInfo.classList.remove('hide');
+    }
+
+    output += `<div class="product-info-box">
+            <div class="product-details">
+              <figure>
+                <img
+                  src="./assets/images/image-product-1-thumbnail.jpg"
+                  alt="Product 1"
+                />
+              </figure>
+              <p>
+                Fall Limited Edition Sneakers <br />
+                <span class="cart-product-price">$125.00</span>
+                <img src="./assets/images/icon-close.svg" alt="" />
+                <span class="total-no">${initial}</span>
+                <span class="total-price">&#36;${totalPrice}</span>
+              </p>
+              <figure>
+                <img
+                  class="delete-icon"
+                  src="./assets/images/icon-delete.svg"
+                  alt="Delete Icon"
+                />
+              </figure>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+          </div>`;
+          productInfo.innerHTML = output;
+
+          let deleteIcon = document.querySelector('.delete-icon');
+
+          deleteIcon.addEventListener('click', ()=> {
+              productInfo.classList.add('hide');
+              productEmpty.classList.remove('hide');
+              
+              let initial = 0;
+              display.innerHTML = `${initial}`;
+              orderNumber.classList.add('hide');
+          })
+}
+//cart functionality end
+
+//Mobile menu
+let menuIcon = document.querySelector('.mobile-menu');
+let menuList = document.querySelector('.left-nav .left-nav-list');
+let leftNav = document.querySelector('.left-nav');
+console.log(menuIcon);
+
+menuIcon.addEventListener('click', ()=> {
+    menuList.classList.toggle('show');
+})
