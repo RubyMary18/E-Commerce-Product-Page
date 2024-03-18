@@ -197,7 +197,7 @@ increment.addEventListener('click', () => {
 
 decrement.addEventListener('click', () => {
     initial--;
-    if(initial < 0) {
+    if (initial < 0) {
         initial = 0;
     }
     numberOfOrder();
@@ -211,16 +211,16 @@ function cartInfo() {
     cartBasket.classList.toggle('hide');
 }
 
-cart.addEventListener('click', ()=> {
+cart.addEventListener('click', () => {
     cartInfo();
 })
 
-addCartBtn.addEventListener('click', ()=> {
+addCartBtn.addEventListener('click', () => {
     removeHide();
     orderNumber.classList.add('dis');
     orderNumber.innerHTML = `${initial}`;
 
-    if(initial == 0){
+    if (initial == 0) {
         orderNumber.classList.add('hide');
     } else {
         cartDisplay();
@@ -233,7 +233,7 @@ function cartDisplay() {
 
     productEmpty.classList.add('hide');
 
-    if(productInfo.classList.contains('hide')) {
+    if (productInfo.classList.contains('hide')) {
         productInfo.classList.remove('hide');
     }
 
@@ -262,18 +262,18 @@ function cartDisplay() {
             </div>
             <button class="checkout-btn">Checkout</button>
           </div>`;
-          productInfo.innerHTML = output;
+    productInfo.innerHTML = output;
 
-          let deleteIcon = document.querySelector('.delete-icon');
+    let deleteIcon = document.querySelector('.delete-icon');
 
-          deleteIcon.addEventListener('click', ()=> {
-              productInfo.classList.add('hide');
-              productEmpty.classList.remove('hide');
-              
-              let initial = 0;
-              display.innerHTML = `${initial}`;
-              orderNumber.classList.add('hide');
-          })
+    deleteIcon.addEventListener('click', () => {
+        productInfo.classList.add('hide');
+        productEmpty.classList.remove('hide');
+
+        let initial = 0;
+        display.innerHTML = `${initial}`;
+        orderNumber.classList.add('hide');
+    })
 }
 //cart functionality end
 
@@ -283,6 +283,6 @@ let menuList = document.querySelector('.left-nav .left-nav-list');
 let leftNav = document.querySelector('.left-nav');
 console.log(menuIcon);
 
-menuIcon.addEventListener('click', ()=> {
+menuIcon.addEventListener('click', () => {
     menuList.classList.toggle('show');
 })
