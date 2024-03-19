@@ -820,7 +820,7 @@ li.number-display {
     width: 38%;
   }
 
-  .left-nav-list:hover::after {
+  .left-nav-list li:hover::after {
     bottom: -8px;
   }
 }
@@ -935,10 +935,6 @@ li.number-display {
 
   .product-details p {
     font-size: 14px;
-  }
-
-  .left-nav-list li:hover::after {
-    bottom: -8px;
   }
 }
 
