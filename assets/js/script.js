@@ -190,12 +190,20 @@ function removeHide() {
     orderNumber.classList.remove('hide');
 }
 
+function changeColor() {
+    if(addCartBtn.classList.contains('change-color')) {
+        addCartBtn.classList.remove('change-color');
+    }
+}
+
 increment.addEventListener('click', () => {
+    changeColor()
     initial++;
     numberOfOrder();
 })
 
 decrement.addEventListener('click', () => {
+    changeColor()
     initial--;
     if (initial < 0) {
         initial = 0;
@@ -216,6 +224,7 @@ cart.addEventListener('click', () => {
 })
 
 addCartBtn.addEventListener('click', () => {
+    addCartBtn.classList.add('change-color');
     removeHide();
     orderNumber.classList.add('dis');
     orderNumber.innerHTML = `${initial}`;
