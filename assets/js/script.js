@@ -211,6 +211,8 @@ decrement.addEventListener('click', () => {
     numberOfOrder();
 })
 
+console.log(initial);
+
 function numberOfOrder() {
     display.innerHTML = initial;
 }
@@ -279,7 +281,7 @@ function cartDisplay() {
         productInfo.classList.add('hide');
         productEmpty.classList.remove('hide');
 
-        let initial = 0;
+        initial = 0;
         display.innerHTML = `${initial}`;
         orderNumber.classList.add('hide');
     })
@@ -294,4 +296,8 @@ console.log(menuIcon);
 
 menuIcon.addEventListener('click', () => {
     menuList.classList.toggle('show');
+})
+
+menuIcon.addEventListener('click', () => {
+    menuList.classList.add('active');
 })
